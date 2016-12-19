@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AllowMe</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest minified jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Wow -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <!-- Rawgit -->
+    <script src="https://rawgit.com/arsood/handlejs/master/handle.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Title, motto, and primary nav -->
+        <div class="row title-area">
+            <div class="page-head">
+                <i class="fa fa-money fa-3x animated wobble" aria-hidden="true"></i>
+                <div class="app-name"><a href="index.html">AllowMe</a></div>
+                <h3 class="motto">The To-Do List That Pays You !</h3>
+                <nav id="primary-nav" aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="#Previous" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#Errands & Chores" id="errands-nav">Errands & Chores</a></li>
+                        <li><a href="#Fitness" id="fitness-nav">Fitness</a></li>
+                        <li><a href="#Studies" id="studies-nav">Studies</a></li>
+                        <li><a href="#Bucketlist" id="bucketlist-nav">Bucketlist</a></li>
+                        <!-- <li><a href="#Other" id="other-nav">Other</a></li> -->
+                        <li class="disabled">
+                            <a href="#Before" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- //Title, motto, and primary nav -->
+
+<!-- BUCKETLIST PAGE -->
+        <!-- Budget, table, and earned -->
+        <div id="bucketlist-page" class="underheader-container" style="background: url(allowme_images/bucketlist_skydiving.jpg) no-repeat; background-size: cover" >
+            <div class="row">
+                <div class="budget-container">
+                    <h2 class="allowme-balance">Current Balance</h2>
+                    <div class="well well-sm budget"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="actionitem-container">
+                    <div class="panel-heading">Bucketlist</div>
+                    <!-- Action items -->
+                    <table class="table">
+                        <tr>
+                            <td class="action-worth col-4">$18.90
+                            </td>
+                            <td class="action-item col-4">Redeem flight lesson
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$23.13
+                            </td>
+                            <td class="action-item col-4">Plan trip to Ireland
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$8.90
+                            </td>
+                            <td class="action-item col-4">Learn how to surf
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$31.85
+                            </td>
+                            <td class="action-item col-4">Go shark cage diving
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$67.10
+                            </td>
+                            <td class="action-item col-4">Pet a tiger
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--// Action items -->
+                    <button type="button" class="btn btn-primary add-action-item-button" data-page="#bucketlist-page">+ Action Item</button>
+                </div>
+                <h2 class="you-earned">You Earned</h2>
+                <div class="well well-sm earned">$0.00</div>
+            </div>
+        </div>
+<!-- //BUCKETLIST PAGE -->
+
+<!-- FITNESS PAGE -->
+        <div id="fitness-page" class="underheader-container" style="background: url(allowme_images/fitness_boxjump.jpg) no-repeat; background-size: cover">
+            <div class="row">
+                <div class="budget-container">
+                    <h2 class="allowme-balance">Current Balance</h2>
+                    <div class="well well-sm budget"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="actionitem-container">
+                    <div class="panel-heading">Fitness</div>
+                    <!-- Action items -->
+                    <table class="table">
+                        <tr>
+                            <td class="action-worth col-4">$55.91
+                            </td>
+                            <td class="action-item col-4">Deadlift 400 lbs
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$96.43
+                            </td>
+                            <td class="action-item col-4">Dunk
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$33.61
+                            </td>
+                            <td class="action-item col-4">Learn 5 new Krav Maga moves
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$19.21
+                            </td>
+                            <td class="action-item col-4">Kickflip a 6-stair
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$81.11
+                            </td>
+                            <td class="action-item col-4">Squat 300 lbs
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--// Action items -->
+                    <button type="button" class="btn btn-primary add-action-item-button" data-page="#fitness-page">+ Action Item</button>
+                </div>
+                <h2 class="you-earned">You Earned</h2>
+                <div class="well well-sm earned">$0.00</div>
+            </div>
+        </div>
+<!-- //FITNESS PAGE -->
+
+<!-- STUDIES PAGE -->
+        <div id="studies-page" class="underheader-container" style="background: url(allowme_images/studies_headbookshelf.jpg) no-repeat; background-size: cover" >
+            <div class="row">
+                <div class="budget-container">
+                    <h2 class="allowme-balance">Current Balance</h2>
+                    <div class="well well-sm budget"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="actionitem-container">
+                    <div class="panel-heading">Studies</div>
+                    <!-- Action items -->
+                    <table class="table">
+                        <tr>
+                            <td class="action-worth col-4">$28.01
+                            </td>
+                            <td class="action-item col-4">Read 30 pages of JavaScript book
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$30.93
+                            </td>
+                            <td class="action-item col-4">Finish Command Line tutorial in Code Academy
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$52.11
+                            </td>
+                            <td class="action-item col-4">Get 90% on quiz
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$44.43
+                            </td>
+                            <td class="action-item col-4">Do a practice GMAT test this weekend
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$87.09
+                            </td>
+                            <td class="action-item col-4">Finish notary public online certification
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--// Action items -->
+                    <button type="button" class="btn btn-primary add-action-item-button" data-page="#studies-page">+ Action Item</button>
+                </div>
+                <h2 class="you-earned">You Earned</h2>
+                <div class="well well-sm earned">$0.00</div>
+            </div>
+        </div>
+<!-- //STUDIES PAGE -->
+
+<!-- ERRANDS & CHORES PAGE -->
+        <div id="errands-page" class="underheader-container  active-page" style="background: url(allowme_images/errands_vacuum.jpg) no-repeat; background-size: cover" >
+            <div class="row">
+                <div class="budget-container">
+                    <h2 class="allowme-balance">Current Balance</h2>
+                    <div class="well well-sm budget"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="actionitem-container">
+                    <div class="panel-heading">Errands & Chores</div>
+                    <!-- Action items -->
+                    <table class="table">
+                        <tr>
+                            <td class="action-worth col-4">$22.21
+                            </td>
+                            <td class="action-item col-4">Replace car windshield
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$27.11
+                            </td>
+                            <td class="action-item col-4">Call plumber to fix shower
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$3.92
+                            </td>
+                            <td class="action-item col-4">Pick up dry-cleaning
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth col-4">$66.13
+                            </td>
+                            <td class="action-item col-4">Clean room
+                            </td>
+                            <td class="action-status col-4">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="action-worth">$43.19
+                            </td>
+                            <td class="action-item">Sell Pokemon cards on eBay
+                            </td>
+                            <td class="action-status">
+                                <button type="button" class="btn btn-default complete-actionitem">
+                                    <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--// Action items -->
+                    <button type="button" class="btn btn-primary add-action-item-button" data-page="#errands-page">+ Action Item</button>
+                </div>
+                <h2 class="you-earned">You Earned</h2>
+                <div class="well well-sm earned">$0.00</div>
+                <!--// Budget, table, and earned -->
+            </div>
+        </div>
+<!-- //ERRANDS & CHORES PAGE -->
+
+<!-- TEMPLATE FOR ADDING NEW ROWS OF ACTION ITEMS -->
+        <script id="list-item-template" type="text/x-handlebars-template">
+            <tr>
+                <td class="action-worth col-4">${{worth}}
+                </td>
+                <td class="action-item col-4">{{actionItem}}
+                </td>
+                <td class="action-status col-4">
+                    <button type="button" class="btn btn-default complete-actionitem">
+                        <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
+                    </button>
+                </td>
+            </tr>
+        </script>
+<!-- //TEMPLATE FOR ADDING NEW ROWS OF ACTION ITEMS -->
+
+<!-- MODAL -->
+        <div class="modal fade" id="add-actionitem-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <input type="hidden" id="action-item-page" />
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Action Item</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="modal-input">
+                            <input id="actionitem-input" type="text" class="form-control" placeholder="Action Item"></input>
+                            <input id="actionitemvalue-input" type="text" class="form-control" placeholder="Value in $"></input>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="action-item-add-button" type="button" class="btn btn-primary" name="add">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- //MODAL -->
+    </body>
+
+    </html>
