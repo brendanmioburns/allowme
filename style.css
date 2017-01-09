@@ -5,6 +5,11 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+h5 {
+    text-align: center;
+}
+
 .container-fluid {
     width: 100%;
     /*margin-left: auto;
